@@ -20,12 +20,6 @@ $(window).load(function () {
 $(document).ready(function ($) {
 	"use strict";
 	
-
-	
-	/*----------------------------------------------------*/
-	/*	Hidder Header
-	/*----------------------------------------------------*/
-	
 	var headerEle = function(){
 		var $headerHeight = $('header').height();
 		$('.hidden-header').css({ 'height' : $headerHeight  + "px" });
@@ -39,19 +33,18 @@ $(document).ready(function ($) {
 	   headerEle();
 	});
 	
-	/*----------------------------------------------------*/
-	/*	Nice-Scroll
-	/*----------------------------------------------------*/
-	
-	
-		
-	
-	/*----------------------------------------------------*/
-	/*	Sliders & Carousel
-	/*----------------------------------------------------*/
-	
-	////------- Touch Slider
-	var time = 4.4,
+   $("html").niceScroll({
+           scrollspeed: 140,
+           mousescrollstep: 38,
+           cursorwidth: 5,
+           cursorborder: 0,
+           cursorcolor: '#333',
+           autohidemode: true,
+           zindex: 999999999,
+           horizrailenabled: false,
+           cursorborderradius: 0,
+   });
+		var time = 4.4,
 		$progressBar,
 		$bar,
 		$elem,
@@ -167,24 +160,11 @@ $(document).ready(function ($) {
 	
 	});
 	
-    
-    
-	
-	/*----------------------------------------------------*/
-	/*	Tabs
-	/*----------------------------------------------------*/
-	
 	$('#myTab a').click(function (e) {
 		e.preventDefault()
 		$(this).tab('show')
 	})
 	
-	
-	
-	
-	/*----------------------------------------------------*/
-	/*	Css3 Transition
-	/*----------------------------------------------------*/
 	window.onload=function(){
 	$('*').each(function(){
 		if($(this).attr('data-animation')) {
@@ -198,27 +178,10 @@ $(document).ready(function ($) {
 	});
 	}
 	
-	
-	
-	
-	/*----------------------------------------------------*/
-	/*	Change Slider Nav Icons
-	/*----------------------------------------------------*/
-	
 	$('.touch-slider').find('.owl-prev').html('<i class="fa fa-angle-left"></i>');
 	$('.touch-slider').find('.owl-next').html('<i class="fa fa-angle-right"></i>');
 	$('.read-more').append('<i class="fa fa-angle-right"></i>');
 	
-	
-	
-	/*----------------------------------------------------*/
-	/*	Tooltips & Fit Vids & Parallax & Text Animations
-	/*----------------------------------------------------*/
-	
-	
 	$('.itl-tooltip').tooltip();
-
-	
 	
 });
-/* ----------------- End JS Document ----------------- */
