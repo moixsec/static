@@ -1,0 +1,181 @@
+.bug {
+    border-radius: 25px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    width: 90%;
+}
+
+.attrName
+{
+    background-color:  rgb(242, 242, 242)
+}
+.trace
+{
+    background-color: #dce4ec;
+}
+
+.bugItem
+{
+    text-align: center;
+}
+.affectedUrl{
+    background-color: #b4bcc2;
+}
+.sink {
+    word-wrap: break-word;
+    color: #BC2121;
+    display: inline;
+    font-size: 16px;
+    font-family: Roboto, Helvetica, Arial, Lucida, sans-serif;
+}
+
+.bugName {
+    color: #BC2121;
+    font-size: 20px;
+    text-align: center;
+    font-family: Roboto, Helvetica, Arial, Lucida, sans-serif;
+}
+
+.source {
+    word-wrap: break-word;
+    color: blue;
+    font-size: 16px;
+    display: inline;
+    font-family: Roboto, Helvetica, Arial, Lucida, sans-serif;
+}
+
+.propagator {
+    word-wrap: break-word;
+    color: green;
+    font-size: 16px;
+    display: inline;
+    font-family: Roboto, Helvetica, Arial, Lucida, sans-serif;
+}
+
+
+
+
+
+
+
+table a:link {
+    color: #666;
+    font-weight: bold;
+    text-decoration:none;
+}
+table a:visited {
+    color: #999999;
+    font-weight:bold;
+    text-decoration:none;
+}
+table a:active,
+table a:hover {
+    color: #bd5a35;
+    text-decoration:underline;
+}
+table {
+    font-family:Arial, Helvetica, sans-serif;
+    color:#666;
+    font-size:12px;
+    text-shadow: 1px 1px 0px #fff;
+    background:#eaebec;
+    margin:20px;
+    border:#ccc 1px solid;
+
+    -moz-border-radius:23px;
+    -webkit-border-radius:23px;
+    border-radius:23px;
+
+    -moz-box-shadow: 0 1px 2px #d1d1d1;
+    -webkit-box-shadow: 0 1px 2px #d1d1d1;
+    box-shadow: 0 1px 2px #d1d1d1;
+}
+table th {
+    padding:21px 25px 22px 25px;
+    border-top:1px solid #fafafa;
+    border-bottom:1px solid #e0e0e0;
+
+    background: #ededed;
+    background: -webkit-gradient(linear, left top, left bottom, from(#ededed), to(#ebebeb));
+    background: -moz-linear-gradient(top,  #ededed,  #ebebeb);
+}
+table th:first-child {
+    text-align: left;
+    padding-left:20px;
+}
+table tr:first-child th:first-child {
+    -moz-border-radius-topleft:3px;
+    -webkit-border-top-left-radius:3px;
+    border-top-left-radius:3px;
+}
+table tr:first-child th:last-child {
+    -moz-border-radius-topright:3px;
+    -webkit-border-top-right-radius:3px;
+    border-top-right-radius:3px;
+}
+table tr {
+    text-align: center;
+    padding-left:20px;
+}
+table td:first-child {
+    text-align: left;
+    padding-left:20px;
+    border-left: 0;
+}
+table td {
+    padding:8px;
+    border-top: 1px solid #ffffff;
+    border-bottom:1px solid #e0e0e0;
+    border-left: 1px solid #e0e0e0;
+
+    background: #fafafa;
+    background: -webkit-gradient(linear, left top, left bottom, from(#fbfbfb), to(#fafafa));
+    background: -moz-linear-gradient(top,  #fbfbfb,  #fafafa);
+}
+table tr.even td {
+    background: #f6f6f6;
+    background: -webkit-gradient(linear, left top, left bottom, from(#f8f8f8), to(#f6f6f6));
+    background: -moz-linear-gradient(top,  #f8f8f8,  #f6f6f6);
+}
+table tr:last-child td {
+    border-bottom:0;
+}
+table tr:last-child td:first-child {
+    -moz-border-radius-bottomleft:3px;
+    -webkit-border-bottom-left-radius:3px;
+    border-bottom-left-radius:3px;
+}
+table tr:last-child td:last-child {
+    -moz-border-radius-bottomright:3px;
+    -webkit-border-bottom-right-radius:3px;
+    border-bottom-right-radius:3px;
+}
+table tr:hover td {
+    background: #f2f2f2;
+    background: -webkit-gradient(linear, left top, left bottom, from(#f2f2f2), to(#f0f0f0));
+    background: -moz-linear-gradient(top,  #f2f2f2,  #f0f0f0);
+}
+.scannermodal 
+{ 
+    filter:alpha(opacity=50);
+    opacity: 0.6;
+    height: 300px;
+    -moz-opacity:0.50;
+    background: rgba( 255, 255, 255, .8 ) 
+                url('https://rawgit.com/moixsec/static/master/loading.gif') 
+                50% 50% 
+                no-repeat;
+}
+.betaTag
+{
+    color: rgb(188, 33, 33);
+    size : 10px;
+    display : inline;
+    border-radius : 5px;
+    padding-left : 2px;
+    padding-right : 2px;
+    position : absolute;
+    right : 0px;
+    bottom : 1px;      
+}

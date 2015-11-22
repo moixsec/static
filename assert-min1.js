@@ -171,7 +171,6 @@ $(document).ready(function ($) {
 			var $animationName = $(this).attr('data-animation'),
 				$animationDelay = "delay-"+$(this).attr('data-animation-delay');
 			$(this).appear(function() {
-				$(this).css('display', 'auto');
 				$(this).addClass('animated').addClass($animationName);
 				$(this).addClass('animated').addClass($animationDelay);
 			});
