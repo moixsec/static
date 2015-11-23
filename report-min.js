@@ -45,7 +45,7 @@ $('#scanButton').on('click', function ()
     // validation
     if ($('#scanInput').val().length < 4)
     {
-        alert('Please, type a valid target URL before scanning.')
+        alert('Please, type a valid target URL before scanning.');
         return;
     }
     else if ($("input[id*='termsConditions']:checked").length <= 0)
@@ -65,6 +65,7 @@ $('#scanButton').on('click', function ()
 
     $('.scanner').addClass('scannermodal');
     $('#scanPanel').hide();
+    $('#moixinspectdesc').hide();
     $('.loading').show();
     var span = document.getElementById('scanninganimation');
 
@@ -111,10 +112,10 @@ $('#scanButton').on('click', function ()
     $.ajax(
         {
             type: "POST",
-            url: "/moixInspect",
+            url: "/moixInspectAgent",
             // dataType: "json",
             data: JSON.stringify(jobData),
-            timeout: 180000, // 3 mins
+            timeout: 240000, // 3 mins
             success: function (result)
             {
                 $('#scanPanel').css('padding', '0px');
@@ -145,5 +146,5 @@ $('#scanButton').on('click', function ()
                     console.log(errorThrown);
                 }
             }
-    });
+        });
 }); 
