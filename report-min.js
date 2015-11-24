@@ -126,7 +126,7 @@ $('#scanButton').on('click', function ()
 
                 $('#targetResults').text('Analysis results for ' + jobData.target);
                 $('#targetResults').show();
-                var data = JSON.parse(result.substring(0, result.length - 1));
+                var data = JSON.parse(result);
                 $("#bugsFound").html(atob(data.results));
                 if (data.stats.length > 2)
                 {
