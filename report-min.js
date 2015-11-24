@@ -42,8 +42,8 @@ function drawChart(stats)
 }
 $('#scanButton').on('click', function ()
 {
-    // validation
-    if ($('#scanInput').val().length < 4)
+    var target = $('#scanInput').val();
+    if (target.length < 4 || target.indexOf('.') == -1)
     {
         alert('Please, type a valid target URL before scanning.');
         return;
@@ -96,7 +96,7 @@ $('#scanButton').on('click', function ()
     // request the scan
     var jobData =
     {
-        'target': $('#scanInput').val(),
+        'target': target,
         'analyzer.rxss': $('#analyzer\\.rxss').val(),
         'analyzer.dom': $('#analyzer\\.dom').val(),
         'maxHopsPerSink': $('#maxHopsPerSink').val(),
@@ -107,30 +107,32 @@ $('#scanButton').on('click', function ()
         'spider.click': $('#spider\\.click').val(),
         'spider.events': $('#spider\\.events').val(),
         'spider.forms': $('#spider\\.forms').val(),
-        'spider.links': $('#spider\\.links').val(),
+        'spider.links': $('#spider\\.links').val()
     };
     $.ajax(
         {
             type: "POST",
             url: "/moixInspectAgent",
-            // dataType: "json",
             data: JSON.stringify(jobData),
-            timeout: 240000, // 3 mins
+            timeout: 240000,
             success: function (result)
             {
+                clearInterval(int);
                 $('#scanPanel').css('padding', '0px');
                 $('.loading').hide();
-                clearInterval(int);
                 $('.scanner').removeClass('scannermodal');
                 $('#NumberBugsFound').show();
-                $('#charts').show();
                 $('#Processed').show();
 
                 $('#targetResults').text('Analysis results for ' + jobData.target);
                 $('#targetResults').show();
                 var data = JSON.parse(result.substring(0, result.length - 1));
                 $("#bugsFound").html(atob(data.results));
-                drawChart(JSON.parse(atob(data.stats)));
+                if (data.stats.length > 2)
+                {
+                    $('#charts').show();
+                    drawChart(JSON.parse(atob(data.stats)));
+                }
                 window.onbeforeunload = null;
             },
             error: function (jqXHR, textStatus, errorThrown)
